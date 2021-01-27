@@ -1,0 +1,1154 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Laravel API",
+        "_postman_id": "be8a4f81-11cd-4f0a-8eb0-61c29480e1b9",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "BookingPages",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get\nGet BookingPage by ID (or Slug using prefix `slug:` and string)",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_pages\/:booking_page_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_page_id",
+                                    "key": "booking_page_id",
+                                    "value": "slug%3Aabc",
+                                    "description": "BookingPage ID or slug:Slug"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update\nUpdate BookingPage by ID",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_pages\/:booking_page_id\/update",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_page_id",
+                                    "key": "booking_page_id",
+                                    "value": "7",
+                                    "description": "BookingPage ID"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"booking_page\": {}\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Create new BookingType\nCreate a new BookingType inside this BookingPage",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_pages\/:booking_page_id\/booking_types\/create",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_page_id",
+                                    "key": "booking_page_id",
+                                    "value": "7",
+                                    "description": "BookingPage ID you want create BookingType for"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"booking_type\": {}\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Suggest slug for new BookingType\nSuggest slug for a new BookingType when text provided",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_pages\/:booking_page_id\/booking_types\/suggest_slug",
+                            "query": [
+                                {
+                                    "key": "string",
+                                    "value": "Interview+Meeting",
+                                    "description": "Text to generate slug from",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "booking_page_id",
+                                    "key": "booking_page_id",
+                                    "value": "7",
+                                    "description": "BookingPage ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get BookingType\nGet the BookingType inside this BookingPage by Slug using prefix `slug:` with string",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_pages\/:booking_page_id\/booking_types\/:booking_type_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_page_id",
+                                    "key": "booking_page_id",
+                                    "value": "7",
+                                    "description": "BookingPage ID"
+                                },
+                                {
+                                    "id": "booking_type_id",
+                                    "key": "booking_type_id",
+                                    "value": "slug%3Aabc",
+                                    "description": "BookingType ID (or Slug)"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "BookingTypes",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/v1\/booking_types\/portfolio_photos",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_types\/portfolio_photos",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get\nGet BookingType by ID",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_types\/:booking_type_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_type_id",
+                                    "key": "booking_type_id",
+                                    "value": "34",
+                                    "description": "BookingType ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update\nUpdate BookingType by ID",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_types\/:booking_type_id\/update",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_type_id",
+                                    "key": "booking_type_id",
+                                    "value": "7",
+                                    "description": "BookingType ID"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"booking_type\": {\n        \"name\": \"voluptates\",\n        \"description\": \"voluptate\",\n        \"color\": \"ff00ff\",\n        \"duration\": 15,\n        \"timezone_code\": \"impedit\",\n        \"timezone_type\": \"magnam\",\n        \"spot_step\": 15,\n        \"max_bookings_per_day\": 17,\n        \"max_booking_time\": 7,\n        \"min_booking_time\": 9,\n        \"buffer_before\": 3,\n        \"buffer_after\": 12,\n        \"notification_type\": \"quia\",\n        \"is_cancellation_allowed\": true,\n        \"cancellation_policy_text\": \"consequatur\",\n        \"is_invitee_reminder_enabled\": false,\n        \"is_invitee_sms_reminder_enabled\": false,\n        \"is_invitee_email_follow_up_enabled\": true,\n        \"is_payment_required\": false,\n        \"rate_value\": 336239406.3153,\n        \"rate_currency_code\": \"quia\",\n        \"is_discount_enabled\": true,\n        \"discount_value\": 5468.546507074,\n        \"discount_has_expiration\": true,\n        \"discount_expiration_date\": \"rerum\",\n        \"locations\": [],\n        \"rules\": [],\n        \"questions\": [],\n        \"coupons\": [],\n        \"portfolios\": []\n    }\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Activate\nActivate BookingType",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_types\/:booking_type_id\/activate",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_type_id",
+                                    "key": "booking_type_id",
+                                    "value": "39",
+                                    "description": "BookingType ID"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Deactivate\nDeactivate BookingType",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_types\/:booking_type_id\/deactivate",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_type_id",
+                                    "key": "booking_type_id",
+                                    "value": "39",
+                                    "description": "BookingType ID"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Suggest slug\nSuggest slug for this BookingType",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_types\/:booking_type_id\/suggest_slug",
+                            "query": [
+                                {
+                                    "key": "string",
+                                    "value": "rerum",
+                                    "description": "string required Test you want to generate slug from",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "booking_type_id",
+                                    "key": "booking_type_id",
+                                    "value": "283",
+                                    "description": "BookingType ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get available dates\nGet available dates & spots from date to date grouping by Timezone",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_types\/:booking_type_id\/available_dates",
+                            "query": [
+                                {
+                                    "key": "date_from",
+                                    "value": "2020-03-20T20%3A00%3A00-03%3A00",
+                                    "description": "Date & Time from",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "date_to",
+                                    "value": "2020-03-10T20%3A00%3A00-03%3A00",
+                                    "description": "Date & Time to",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "timezone_code",
+                                    "value": "America%2FToronto",
+                                    "description": "Timezone Code to group available spots into dates",
+                                    "disabled": false
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "booking_type_id",
+                                    "key": "booking_type_id",
+                                    "value": "234",
+                                    "description": "BookingType ID"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Book\nBook this BookingType",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/booking_types\/:booking_type_id\/book",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "booking_type_id",
+                                    "key": "booking_type_id",
+                                    "value": "343",
+                                    "description": "BookingType ID"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"booking\": {\n        \"start_time\": \"cumque\"\n    },\n    \"user\": {\n        \"email\": \"aut\",\n        \"first_name\": \"aspernatur\",\n        \"last_name\": \"laborum\",\n        \"locality_key\": \"reiciendis\"\n    }\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Users",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get\nGet User by ID (or `me` for authenticated User)",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/users\/:user_id",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "inventore",
+                                    "description": "User ID (or `me` string)"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update\nUpdate User by ID (or `me` for authenticated User)",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/users\/:user_id\/update",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "me",
+                                    "description": "User ID (or `me` string)"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user\": {\n        \"email\": \"test@email.com\",\n        \"first_name\": \"Joe\",\n        \"last_name\": \"Doe\",\n        \"locale\": \"en\",\n        \"date_format\": \"24H\",\n        \"time_format\": \"AMERICAN\",\n        \"locality_key\": \"ChIJDbdkHFQayUwR7-8fITgxTmU\",\n        \"avatar_file\": \"dolor\",\n        \"title\": \"Full-Stuck Developer\",\n        \"workplace_name\": \"Bookify INC.\",\n        \"workplace_website_url\": \"https:\\\/\\\/www.bookify.ai\\\/\"\n    }\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Change email\nChange User email by User ID (or `me` for authenticated User)",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/users\/:user_id\/change_email",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "neque",
+                                    "description": "User ID (or `me` string)"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get BookingPages\nGet BookingPages of this User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/users\/:user_id\/booking_pages",
+                            "query": [],
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "83",
+                                    "description": "User ID (or `me`)"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "general",
+            "description": "",
+            "item": [
+                {
+                    "name": "Handle a login request to the application.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/login",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/auth\/refresh",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/refresh",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/auth\/email\/check",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/email\/check",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/auth\/email\/forget",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/email\/forget",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Log the user out of the application.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/logout",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Handle a registration request for the application.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/register",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Send a reset link to the given user.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/password\/email",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Reset the given user's password.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/password\/reset",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Change User password",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/auth\/password\/change",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"current_password\": \"eligendi\",\n    \"password\": \"quo\",\n    \"password_confirmation\": \"est\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/localities\/detect",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/localities\/detect",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/localities\/autocomplete",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/localities\/autocomplete",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/localities\/{locality_key}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/localities\/:locality_key",
+                            "query": []
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/intro\/basic",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/intro\/basic",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/intro\/calendar",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/intro\/calendar",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/intro\/calendar\/settings",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/intro\/calendar\/settings",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/intro\/availability",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/intro\/availability",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "api\/v1\/intro\/role",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "loc.bookify.ai",
+                            "path": "api\/v1\/intro\/role",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}

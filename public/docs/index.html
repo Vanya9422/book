@@ -1,0 +1,2531 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://loc.bookify.ai/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>BookingPages</h1>
+<!-- START_e382c4744c200b6b0678ad232899580f -->
+<h2>Get</h2>
+<p>Get BookingPage by ID (or Slug using prefix <code>slug:</code> and string)</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/booking_pages/slug:abc" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_pages/slug:abc"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "user_id": 1,
+        "organization_id": null,
+        "slug": "a3om77",
+        "title": null,
+        "use_user_name_as_title": true,
+        "use_user_avatar_as_user_avatar": true,
+        "welcome_message": "Welcome to my scheduling page. Please follow the instructions to add a booking to my calendar.",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-24 21:18:59",
+        "deleted_at": null,
+        "computed_title": null,
+        "user_avatar": {
+            "id": null,
+            "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+        },
+        "computed_user_avatar": {
+            "id": null,
+            "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+        },
+        "logo": {
+            "id": null,
+            "url": null
+        },
+        "user": {
+            "id": 1,
+            "first_name": "Daniel",
+            "last_name": "Runkov",
+            "email_verified_at": null,
+            "title": "456 1",
+            "workplace_name": "sadasd dsadas",
+            "workplace_website_url": "http:\/\/www.yandex.ru",
+            "country_code": "CA",
+            "locality_key": "ChIJDbdkHFQayUwR7-8fITgxTmU",
+            "locale": "en",
+            "date_format": "AMERICAN",
+            "time_format": "12H",
+            "created_at": "2020-03-24 21:18:59",
+            "updated_at": "2020-03-27 21:34:21",
+            "deleted_at": null,
+            "avatar": {
+                "id": null,
+                "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+            },
+            "media": []
+        },
+        "media": []
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/booking_pages/{booking_page_id}</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_page_id</code></td>
+<td>required</td>
+<td>BookingPage ID or slug:Slug</td>
+</tr>
+</tbody>
+</table>
+<!-- END_e382c4744c200b6b0678ad232899580f -->
+<!-- START_ebd93af70ff4743fae01090d299212aa -->
+<h2>Update</h2>
+<p>Update BookingPage by ID</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/booking_pages/7/update" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"booking_page":{}}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_pages/7/update"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "booking_page": {}
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "user_id": 1,
+        "organization_id": null,
+        "slug": "a3om77",
+        "title": null,
+        "use_user_name_as_title": true,
+        "use_user_avatar_as_user_avatar": true,
+        "welcome_message": "Welcome to my scheduling page. Please follow the instructions to add a booking to my calendar.",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-24 21:18:59",
+        "deleted_at": null,
+        "computed_title": null,
+        "user_avatar": {
+            "id": null,
+            "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+        },
+        "computed_user_avatar": {
+            "id": null,
+            "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+        },
+        "logo": {
+            "id": null,
+            "url": null
+        },
+        "user": {
+            "id": 1,
+            "first_name": "Daniel",
+            "last_name": "Runkov",
+            "email_verified_at": null,
+            "title": "456 1",
+            "workplace_name": "sadasd dsadas",
+            "workplace_website_url": "http:\/\/www.yandex.ru",
+            "country_code": "CA",
+            "locality_key": "ChIJDbdkHFQayUwR7-8fITgxTmU",
+            "locale": "en",
+            "date_format": "AMERICAN",
+            "time_format": "12H",
+            "created_at": "2020-03-24 21:18:59",
+            "updated_at": "2020-03-27 21:34:21",
+            "deleted_at": null,
+            "avatar": {
+                "id": null,
+                "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+            },
+            "media": []
+        },
+        "media": []
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/booking_pages/{booking_page_id}/update</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_page_id</code></td>
+<td>required</td>
+<td>BookingPage ID</td>
+</tr>
+</tbody>
+</table>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_page</code></td>
+<td>object</td>
+<td>required</td>
+<td>BookingPage</td>
+</tr>
+</tbody>
+</table>
+<!-- END_ebd93af70ff4743fae01090d299212aa -->
+<!-- START_836d70b2a5fbf4e85e66d9c770b3d875 -->
+<h2>Create new BookingType</h2>
+<p>Create a new BookingType inside this BookingPage</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/booking_pages/7/booking_types/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"booking_type":{}}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_pages/7/booking_types/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "booking_type": {}
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "parent_type": "BookingPage",
+        "parent_id": 1,
+        "type": "SOLO",
+        "slug": "15min",
+        "name": "15 Minute Meeting",
+        "description": null,
+        "locale": "en",
+        "period_type": "MOVING",
+        "duration": 15,
+        "color": "dfc12d",
+        "max_invitees": null,
+        "timezone_code": null,
+        "timezone_type": "LOCAL",
+        "max_bookings_per_day": null,
+        "min_booking_time": 14400,
+        "max_booking_time": 5184000,
+        "buffer_before": 0,
+        "buffer_after": 0,
+        "spot_step": 15,
+        "autofill_invitee_information": 0,
+        "allow_invitees_to_add_guests": 0,
+        "invitee_name_format": "",
+        "notification_type": "",
+        "is_cancellation_allowed": false,
+        "cancellation_policy_text": "",
+        "is_invitee_reminder_enabled": false,
+        "is_invitee_sms_reminder_enabled": false,
+        "is_invitee_email_follow_up_enabled": false,
+        "start_date": null,
+        "end_date": null,
+        "is_public": true,
+        "is_active": true,
+        "internal_note": "",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-24 21:27:43",
+        "is_payment_required": 0,
+        "rate_value": "0.00",
+        "rate_currency_code": "",
+        "is_discount_enabled": 0,
+        "discount_value": "0.00",
+        "discount_has_expiration": 0,
+        "discount_expiration_date": "0000-00-00",
+        "is_portfolio_enabled": 0
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/booking_pages/{booking_page_id}/booking_types/create</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_page_id</code></td>
+<td>required</td>
+<td>BookingPage ID you want create BookingType for</td>
+</tr>
+</tbody>
+</table>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type</code></td>
+<td>object</td>
+<td>required</td>
+<td>BookingType</td>
+</tr>
+</tbody>
+</table>
+<!-- END_836d70b2a5fbf4e85e66d9c770b3d875 -->
+<!-- START_c31881aa9f5942247e7b85d87f9a1fb0 -->
+<h2>Suggest slug for new BookingType</h2>
+<p>Suggest slug for a new BookingType when text provided</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/booking_pages/7/booking_types/suggest_slug?string=Interview+Meeting" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_pages/7/booking_types/suggest_slug"
+);
+
+let params = {
+    "string": "Interview Meeting",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": "interview-meeting"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/booking_pages/{booking_page_id}/booking_types/suggest_slug</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_page_id</code></td>
+<td>required</td>
+<td>BookingPage ID</td>
+</tr>
+</tbody>
+</table>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>required</td>
+<td>Text to generate slug from</td>
+</tr>
+</tbody>
+</table>
+<!-- END_c31881aa9f5942247e7b85d87f9a1fb0 -->
+<!-- START_0a71947b502fb4f28c505ca573dbf260 -->
+<h2>Get BookingType</h2>
+<p>Get the BookingType inside this BookingPage by Slug using prefix <code>slug:</code> with string</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/booking_pages/7/booking_types/slug:abc" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_pages/7/booking_types/slug:abc"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "parent_type": "BookingPage",
+        "parent_id": 1,
+        "type": "SOLO",
+        "slug": "15min",
+        "name": "15 Minute Meeting",
+        "description": null,
+        "locale": "en",
+        "period_type": "MOVING",
+        "duration": 15,
+        "color": "dfc12d",
+        "max_invitees": null,
+        "timezone_code": null,
+        "timezone_type": "LOCAL",
+        "max_bookings_per_day": null,
+        "min_booking_time": 14400,
+        "max_booking_time": 5184000,
+        "buffer_before": 0,
+        "buffer_after": 0,
+        "spot_step": 15,
+        "autofill_invitee_information": 0,
+        "allow_invitees_to_add_guests": 0,
+        "invitee_name_format": "",
+        "notification_type": "",
+        "is_cancellation_allowed": false,
+        "cancellation_policy_text": "",
+        "is_invitee_reminder_enabled": false,
+        "is_invitee_sms_reminder_enabled": false,
+        "is_invitee_email_follow_up_enabled": false,
+        "start_date": null,
+        "end_date": null,
+        "is_public": true,
+        "is_active": true,
+        "internal_note": "",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-24 21:27:43",
+        "is_payment_required": 0,
+        "rate_value": "0.00",
+        "rate_currency_code": "",
+        "is_discount_enabled": 0,
+        "discount_value": "0.00",
+        "discount_has_expiration": 0,
+        "discount_expiration_date": "0000-00-00",
+        "is_portfolio_enabled": 0
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/booking_pages/{booking_page_id}/booking_types/{booking_type_id}</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_page_id</code></td>
+<td>required</td>
+<td>BookingPage ID</td>
+</tr>
+<tr>
+<td><code>booking_type_id</code></td>
+<td>required</td>
+<td>BookingType ID (or Slug)</td>
+</tr>
+</tbody>
+</table>
+<!-- END_0a71947b502fb4f28c505ca573dbf260 -->
+<h1>BookingTypes</h1>
+<!-- START_f4cdbefe6555818988c65497437ea436 -->
+<h2>api/v1/booking_types/portfolio_photos</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/booking_types/portfolio_photos" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_types/portfolio_photos"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/booking_types/portfolio_photos</code></p>
+<!-- END_f4cdbefe6555818988c65497437ea436 -->
+<!-- START_a857c0d7c51aaf05013f0eb4defc3a1a -->
+<h2>Get</h2>
+<p>Get BookingType by ID</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/booking_types/34" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_types/34"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "parent_type": "BookingPage",
+        "parent_id": 1,
+        "type": "SOLO",
+        "slug": "15min",
+        "name": "15 Minute Meeting",
+        "description": null,
+        "locale": "en",
+        "period_type": "MOVING",
+        "duration": 15,
+        "color": "dfc12d",
+        "max_invitees": null,
+        "timezone_code": null,
+        "timezone_type": "LOCAL",
+        "max_bookings_per_day": null,
+        "min_booking_time": 14400,
+        "max_booking_time": 5184000,
+        "buffer_before": 0,
+        "buffer_after": 0,
+        "spot_step": 15,
+        "autofill_invitee_information": 0,
+        "allow_invitees_to_add_guests": 0,
+        "invitee_name_format": "",
+        "notification_type": "",
+        "is_cancellation_allowed": false,
+        "cancellation_policy_text": "",
+        "is_invitee_reminder_enabled": false,
+        "is_invitee_sms_reminder_enabled": false,
+        "is_invitee_email_follow_up_enabled": false,
+        "start_date": null,
+        "end_date": null,
+        "is_public": true,
+        "is_active": true,
+        "internal_note": "",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-24 21:27:43",
+        "is_payment_required": 0,
+        "rate_value": "0.00",
+        "rate_currency_code": "",
+        "is_discount_enabled": 0,
+        "discount_value": "0.00",
+        "discount_has_expiration": 0,
+        "discount_expiration_date": "0000-00-00",
+        "is_portfolio_enabled": 0
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/booking_types/{booking_type_id}</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type_id</code></td>
+<td>required</td>
+<td>BookingType ID</td>
+</tr>
+</tbody>
+</table>
+<!-- END_a857c0d7c51aaf05013f0eb4defc3a1a -->
+<!-- START_53280a2b5669780395efe9122ceac510 -->
+<h2>Update</h2>
+<p>Update BookingType by ID</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/booking_types/7/update" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"booking_type":{"name":"voluptates","description":"voluptate","color":"ff00ff","duration":15,"timezone_code":"impedit","timezone_type":"magnam","spot_step":15,"max_bookings_per_day":17,"max_booking_time":7,"min_booking_time":9,"buffer_before":3,"buffer_after":12,"notification_type":"quia","is_cancellation_allowed":true,"cancellation_policy_text":"consequatur","is_invitee_reminder_enabled":false,"is_invitee_sms_reminder_enabled":false,"is_invitee_email_follow_up_enabled":true,"is_payment_required":false,"rate_value":336239406.3153,"rate_currency_code":"quia","is_discount_enabled":true,"discount_value":5468.546507074,"discount_has_expiration":true,"discount_expiration_date":"rerum","locations":[],"rules":[],"questions":[],"coupons":[],"portfolios":[]}}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_types/7/update"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "booking_type": {
+        "name": "voluptates",
+        "description": "voluptate",
+        "color": "ff00ff",
+        "duration": 15,
+        "timezone_code": "impedit",
+        "timezone_type": "magnam",
+        "spot_step": 15,
+        "max_bookings_per_day": 17,
+        "max_booking_time": 7,
+        "min_booking_time": 9,
+        "buffer_before": 3,
+        "buffer_after": 12,
+        "notification_type": "quia",
+        "is_cancellation_allowed": true,
+        "cancellation_policy_text": "consequatur",
+        "is_invitee_reminder_enabled": false,
+        "is_invitee_sms_reminder_enabled": false,
+        "is_invitee_email_follow_up_enabled": true,
+        "is_payment_required": false,
+        "rate_value": 336239406.3153,
+        "rate_currency_code": "quia",
+        "is_discount_enabled": true,
+        "discount_value": 5468.546507074,
+        "discount_has_expiration": true,
+        "discount_expiration_date": "rerum",
+        "locations": [],
+        "rules": [],
+        "questions": [],
+        "coupons": [],
+        "portfolios": []
+    }
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "parent_type": "BookingPage",
+        "parent_id": 1,
+        "type": "SOLO",
+        "slug": "15min",
+        "name": "15 Minute Meeting",
+        "description": null,
+        "locale": "en",
+        "period_type": "MOVING",
+        "duration": 15,
+        "color": "dfc12d",
+        "max_invitees": null,
+        "timezone_code": null,
+        "timezone_type": "LOCAL",
+        "max_bookings_per_day": null,
+        "min_booking_time": 14400,
+        "max_booking_time": 5184000,
+        "buffer_before": 0,
+        "buffer_after": 0,
+        "spot_step": 15,
+        "autofill_invitee_information": 0,
+        "allow_invitees_to_add_guests": 0,
+        "invitee_name_format": "",
+        "notification_type": "",
+        "is_cancellation_allowed": false,
+        "cancellation_policy_text": "",
+        "is_invitee_reminder_enabled": false,
+        "is_invitee_sms_reminder_enabled": false,
+        "is_invitee_email_follow_up_enabled": false,
+        "start_date": null,
+        "end_date": null,
+        "is_public": true,
+        "is_active": true,
+        "internal_note": "",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-24 21:27:43",
+        "is_payment_required": 0,
+        "rate_value": "0.00",
+        "rate_currency_code": "",
+        "is_discount_enabled": 0,
+        "discount_value": "0.00",
+        "discount_has_expiration": 0,
+        "discount_expiration_date": "0000-00-00",
+        "is_portfolio_enabled": 0
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/booking_types/{booking_type_id}/update</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type_id</code></td>
+<td>required</td>
+<td>BookingType ID</td>
+</tr>
+</tbody>
+</table>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type</code></td>
+<td>object</td>
+<td>required</td>
+<td>BookingType</td>
+</tr>
+<tr>
+<td><code>booking_type.name</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Name</td>
+</tr>
+<tr>
+<td><code>booking_type.description</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Description</td>
+</tr>
+<tr>
+<td><code>booking_type.color</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Color (HEX)</td>
+</tr>
+<tr>
+<td><code>booking_type.duration</code></td>
+<td>integer</td>
+<td>optional</td>
+<td>Duration</td>
+</tr>
+<tr>
+<td><code>booking_type.timezone_code</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Timezone Code</td>
+</tr>
+<tr>
+<td><code>booking_type.timezone_type</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Timezone Type</td>
+</tr>
+<tr>
+<td><code>booking_type.spot_step</code></td>
+<td>integer</td>
+<td>optional</td>
+<td>Spot Step</td>
+</tr>
+<tr>
+<td><code>booking_type.max_bookings_per_day</code></td>
+<td>integer</td>
+<td>optional</td>
+<td>Max Bookings per Day</td>
+</tr>
+<tr>
+<td><code>booking_type.max_booking_time</code></td>
+<td>integer</td>
+<td>optional</td>
+<td>Max Booking Time</td>
+</tr>
+<tr>
+<td><code>booking_type.min_booking_time</code></td>
+<td>integer</td>
+<td>optional</td>
+<td>Min Booking Time</td>
+</tr>
+<tr>
+<td><code>booking_type.buffer_before</code></td>
+<td>integer</td>
+<td>optional</td>
+<td>Buffer Before</td>
+</tr>
+<tr>
+<td><code>booking_type.buffer_after</code></td>
+<td>integer</td>
+<td>optional</td>
+<td>Buffer After</td>
+</tr>
+<tr>
+<td><code>booking_type.notification_type</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Notification Type</td>
+</tr>
+<tr>
+<td><code>booking_type.is_cancellation_allowed</code></td>
+<td>boolean</td>
+<td>optional</td>
+<td>Is Cancelation allowed?</td>
+</tr>
+<tr>
+<td><code>booking_type.cancellation_policy_text</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Concelation Policy Text</td>
+</tr>
+<tr>
+<td><code>booking_type.is_invitee_reminder_enabled</code></td>
+<td>boolean</td>
+<td>optional</td>
+<td>Is Invitee Reminder enabled?</td>
+</tr>
+<tr>
+<td><code>booking_type.is_invitee_sms_reminder_enabled</code></td>
+<td>boolean</td>
+<td>optional</td>
+<td>Is Invitee SMS Reminder enabled?</td>
+</tr>
+<tr>
+<td><code>booking_type.is_invitee_email_follow_up_enabled</code></td>
+<td>boolean</td>
+<td>optional</td>
+<td>Is Invitee Email Follow Up enabled?</td>
+</tr>
+<tr>
+<td><code>booking_type.is_payment_required</code></td>
+<td>boolean</td>
+<td>optional</td>
+<td>Is Payment required?</td>
+</tr>
+<tr>
+<td><code>booking_type.rate_value</code></td>
+<td>float</td>
+<td>optional</td>
+<td>Rate Value</td>
+</tr>
+<tr>
+<td><code>booking_type.rate_currency_code</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Rate Currency Code</td>
+</tr>
+<tr>
+<td><code>booking_type.is_discount_enabled</code></td>
+<td>boolean</td>
+<td>optional</td>
+<td>Is Discount enabled?</td>
+</tr>
+<tr>
+<td><code>booking_type.discount_value</code></td>
+<td>float</td>
+<td>optional</td>
+<td>Discount value</td>
+</tr>
+<tr>
+<td><code>booking_type.discount_has_expiration</code></td>
+<td>boolean</td>
+<td>optional</td>
+<td>Discount has expiration?</td>
+</tr>
+<tr>
+<td><code>booking_type.discount_expiration_date</code></td>
+<td>date</td>
+<td>optional</td>
+<td>Discount Expiration Date</td>
+</tr>
+<tr>
+<td><code>booking_type.locations</code></td>
+<td>array</td>
+<td>optional</td>
+<td>Locations</td>
+</tr>
+<tr>
+<td><code>booking_type.rules</code></td>
+<td>array</td>
+<td>optional</td>
+<td>Rules</td>
+</tr>
+<tr>
+<td><code>booking_type.questions</code></td>
+<td>array</td>
+<td>optional</td>
+<td>Questions</td>
+</tr>
+<tr>
+<td><code>booking_type.coupons</code></td>
+<td>array</td>
+<td>optional</td>
+<td>Coupons</td>
+</tr>
+<tr>
+<td><code>booking_type.portfolios</code></td>
+<td>array</td>
+<td>optional</td>
+<td>Portfolios</td>
+</tr>
+</tbody>
+</table>
+<!-- END_53280a2b5669780395efe9122ceac510 -->
+<!-- START_da6616ee0a19483f99dfe41f6fde364c -->
+<h2>Activate</h2>
+<p>Activate BookingType</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/booking_types/39/activate" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_types/39/activate"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "parent_type": "BookingPage",
+        "parent_id": 1,
+        "type": "SOLO",
+        "slug": "15min",
+        "name": "15 Minute Meeting",
+        "description": null,
+        "locale": "en",
+        "period_type": "MOVING",
+        "duration": 15,
+        "color": "dfc12d",
+        "max_invitees": null,
+        "timezone_code": null,
+        "timezone_type": "LOCAL",
+        "max_bookings_per_day": null,
+        "min_booking_time": 14400,
+        "max_booking_time": 5184000,
+        "buffer_before": 0,
+        "buffer_after": 0,
+        "spot_step": 15,
+        "autofill_invitee_information": 0,
+        "allow_invitees_to_add_guests": 0,
+        "invitee_name_format": "",
+        "notification_type": "",
+        "is_cancellation_allowed": false,
+        "cancellation_policy_text": "",
+        "is_invitee_reminder_enabled": false,
+        "is_invitee_sms_reminder_enabled": false,
+        "is_invitee_email_follow_up_enabled": false,
+        "start_date": null,
+        "end_date": null,
+        "is_public": true,
+        "is_active": true,
+        "internal_note": "",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-24 21:27:43",
+        "is_payment_required": 0,
+        "rate_value": "0.00",
+        "rate_currency_code": "",
+        "is_discount_enabled": 0,
+        "discount_value": "0.00",
+        "discount_has_expiration": 0,
+        "discount_expiration_date": "0000-00-00",
+        "is_portfolio_enabled": 0
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/booking_types/{booking_type_id}/activate</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type_id</code></td>
+<td>required</td>
+<td>BookingType ID</td>
+</tr>
+</tbody>
+</table>
+<!-- END_da6616ee0a19483f99dfe41f6fde364c -->
+<!-- START_53538a72257d34ab128776e60144f821 -->
+<h2>Deactivate</h2>
+<p>Deactivate BookingType</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/booking_types/39/deactivate" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_types/39/deactivate"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "parent_type": "BookingPage",
+        "parent_id": 1,
+        "type": "SOLO",
+        "slug": "15min",
+        "name": "15 Minute Meeting",
+        "description": null,
+        "locale": "en",
+        "period_type": "MOVING",
+        "duration": 15,
+        "color": "dfc12d",
+        "max_invitees": null,
+        "timezone_code": null,
+        "timezone_type": "LOCAL",
+        "max_bookings_per_day": null,
+        "min_booking_time": 14400,
+        "max_booking_time": 5184000,
+        "buffer_before": 0,
+        "buffer_after": 0,
+        "spot_step": 15,
+        "autofill_invitee_information": 0,
+        "allow_invitees_to_add_guests": 0,
+        "invitee_name_format": "",
+        "notification_type": "",
+        "is_cancellation_allowed": false,
+        "cancellation_policy_text": "",
+        "is_invitee_reminder_enabled": false,
+        "is_invitee_sms_reminder_enabled": false,
+        "is_invitee_email_follow_up_enabled": false,
+        "start_date": null,
+        "end_date": null,
+        "is_public": true,
+        "is_active": true,
+        "internal_note": "",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-24 21:27:43",
+        "is_payment_required": 0,
+        "rate_value": "0.00",
+        "rate_currency_code": "",
+        "is_discount_enabled": 0,
+        "discount_value": "0.00",
+        "discount_has_expiration": 0,
+        "discount_expiration_date": "0000-00-00",
+        "is_portfolio_enabled": 0
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/booking_types/{booking_type_id}/deactivate</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type_id</code></td>
+<td>required</td>
+<td>BookingType ID</td>
+</tr>
+</tbody>
+</table>
+<!-- END_53538a72257d34ab128776e60144f821 -->
+<!-- START_c021c8ceb05a4d833e8808d0d23fb4b9 -->
+<h2>Suggest slug</h2>
+<p>Suggest slug for this BookingType</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/booking_types/283/suggest_slug?string=rerum" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_types/283/suggest_slug"
+);
+
+let params = {
+    "string": "rerum",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": "some-slug-here"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/booking_types/{booking_type_id}/suggest_slug</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type_id</code></td>
+<td>required</td>
+<td>BookingType ID</td>
+</tr>
+</tbody>
+</table>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>optional</td>
+<td>string required Test you want to generate slug from</td>
+</tr>
+</tbody>
+</table>
+<!-- END_c021c8ceb05a4d833e8808d0d23fb4b9 -->
+<!-- START_c0454df18b6019fb3c875abe5ff2867e -->
+<h2>Get available dates</h2>
+<p>Get available dates &amp; spots from date to date grouping by Timezone</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/booking_types/234/available_dates?date_from=2020-03-20T20%3A00%3A00-03%3A00&amp;date_to=2020-03-10T20%3A00%3A00-03%3A00&amp;timezone_code=America%2FToronto" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_types/234/available_dates"
+);
+
+let params = {
+    "date_from": "2020-03-20T20:00:00-03:00",
+    "date_to": "2020-03-10T20:00:00-03:00",
+    "timezone_code": "America/Toronto",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "value": "2020-03-20",
+            "spots": [
+                "2020-03-20T20:00:00-03:00",
+                "2020-03-20T20:15:00-03:00",
+                "2020-03-20T20:30:00-03:00"
+            ]
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/booking_types/{booking_type_id}/available_dates</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type_id</code></td>
+<td>required</td>
+<td>BookingType ID</td>
+</tr>
+</tbody>
+</table>
+<h4>Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>required</td>
+<td>Date &amp; Time from</td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>required</td>
+<td>Date &amp; Time to</td>
+</tr>
+<tr>
+<td><code>timezone_code</code></td>
+<td>required</td>
+<td>Timezone Code to group available spots into dates</td>
+</tr>
+</tbody>
+</table>
+<!-- END_c0454df18b6019fb3c875abe5ff2867e -->
+<!-- START_4e5d40c72e8c3c339cb1153df1db9699 -->
+<h2>Book</h2>
+<p>Book this BookingType</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/booking_types/343/book" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"booking":{"start_time":"cumque"},"user":{"email":"aut","first_name":"aspernatur","last_name":"laborum","locality_key":"reiciendis"}}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/booking_types/343/book"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "booking": {
+        "start_time": "cumque"
+    },
+    "user": {
+        "email": "aut",
+        "first_name": "aspernatur",
+        "last_name": "laborum",
+        "locality_key": "reiciendis"
+    }
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": []
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/booking_types/{booking_type_id}/book</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking_type_id</code></td>
+<td>required</td>
+<td>BookingType ID</td>
+</tr>
+</tbody>
+</table>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>booking</code></td>
+<td>object</td>
+<td>required</td>
+<td>Booking</td>
+</tr>
+<tr>
+<td><code>booking.start_time</code></td>
+<td>date</td>
+<td>required</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>object</td>
+<td>optional</td>
+<td>User to register (if you are not authorized)</td>
+</tr>
+<tr>
+<td><code>user.email</code></td>
+<td>email</td>
+<td>required</td>
+<td>Email</td>
+</tr>
+<tr>
+<td><code>user.first_name</code></td>
+<td>string</td>
+<td>required</td>
+<td>First Name</td>
+</tr>
+<tr>
+<td><code>user.last_name</code></td>
+<td>string</td>
+<td>required</td>
+<td>Last Name</td>
+</tr>
+<tr>
+<td><code>user.locality_key</code></td>
+<td>string</td>
+<td>required</td>
+<td>Locality Key</td>
+</tr>
+</tbody>
+</table>
+<!-- END_4e5d40c72e8c3c339cb1153df1db9699 -->
+<h1>Users</h1>
+<!-- START_6ce881a13ea3bed27b091365cdc5c521 -->
+<h2>Get</h2>
+<p>Get User by ID (or <code>me</code> for authenticated User)</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/users/inventore" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/users/inventore"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "first_name": "Daniel",
+        "last_name": "Runkov",
+        "email_verified_at": null,
+        "title": "456 1",
+        "workplace_name": "sadasd dsadas",
+        "workplace_website_url": "http:\/\/www.yandex.ru",
+        "country_code": "CA",
+        "locality_key": "ChIJDbdkHFQayUwR7-8fITgxTmU",
+        "locale": "en",
+        "date_format": "AMERICAN",
+        "time_format": "12H",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-27 21:34:21",
+        "deleted_at": null,
+        "avatar": {
+            "id": null,
+            "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+        },
+        "media": []
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/users/{user_id}</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user_id</code></td>
+<td>required</td>
+<td>User ID (or <code>me</code> string)</td>
+</tr>
+</tbody>
+</table>
+<!-- END_6ce881a13ea3bed27b091365cdc5c521 -->
+<!-- START_f0459c216bfd2def5e952956b82cbcb4 -->
+<h2>Update</h2>
+<p>Update User by ID (or <code>me</code> for authenticated User)</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/users/me/update" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"user":{"email":"test@email.com","first_name":"Joe","last_name":"Doe","locale":"en","date_format":"24H","time_format":"AMERICAN","locality_key":"ChIJDbdkHFQayUwR7-8fITgxTmU","avatar_file":"dolor","title":"Full-Stuck Developer","workplace_name":"Bookify INC.","workplace_website_url":"https:\/\/www.bookify.ai\/"}}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/users/me/update"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "user": {
+        "email": "test@email.com",
+        "first_name": "Joe",
+        "last_name": "Doe",
+        "locale": "en",
+        "date_format": "24H",
+        "time_format": "AMERICAN",
+        "locality_key": "ChIJDbdkHFQayUwR7-8fITgxTmU",
+        "avatar_file": "dolor",
+        "title": "Full-Stuck Developer",
+        "workplace_name": "Bookify INC.",
+        "workplace_website_url": "https:\/\/www.bookify.ai\/"
+    }
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "first_name": "Daniel",
+        "last_name": "Runkov",
+        "email_verified_at": null,
+        "title": "456 1",
+        "workplace_name": "sadasd dsadas",
+        "workplace_website_url": "http:\/\/www.yandex.ru",
+        "country_code": "CA",
+        "locality_key": "ChIJDbdkHFQayUwR7-8fITgxTmU",
+        "locale": "en",
+        "date_format": "AMERICAN",
+        "time_format": "12H",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-27 21:34:21",
+        "deleted_at": null,
+        "avatar": {
+            "id": null,
+            "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+        },
+        "media": []
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/users/{user_id}/update</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user_id</code></td>
+<td>required</td>
+<td>User ID (or <code>me</code> string)</td>
+</tr>
+</tbody>
+</table>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user</code></td>
+<td>object</td>
+<td>required</td>
+<td>User</td>
+</tr>
+<tr>
+<td><code>user.email</code></td>
+<td>email</td>
+<td>optional</td>
+<td>Email</td>
+</tr>
+<tr>
+<td><code>user.first_name</code></td>
+<td>string</td>
+<td>optional</td>
+<td>First Name</td>
+</tr>
+<tr>
+<td><code>user.last_name</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Last Name</td>
+</tr>
+<tr>
+<td><code>user.locale</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Locale</td>
+</tr>
+<tr>
+<td><code>user.date_format</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Date Format</td>
+</tr>
+<tr>
+<td><code>user.time_format</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Time Format</td>
+</tr>
+<tr>
+<td><code>user.locality_key</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Locality Key</td>
+</tr>
+<tr>
+<td><code>user.avatar_file</code></td>
+<td>file</td>
+<td>optional</td>
+<td>Avatar File</td>
+</tr>
+<tr>
+<td><code>user.title</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Title</td>
+</tr>
+<tr>
+<td><code>user.workplace_name</code></td>
+<td>string</td>
+<td>optional</td>
+<td>Workplace Name</td>
+</tr>
+<tr>
+<td><code>user.workplace_website_url</code></td>
+<td>url</td>
+<td>optional</td>
+<td>Workplace Website Url</td>
+</tr>
+</tbody>
+</table>
+<!-- END_f0459c216bfd2def5e952956b82cbcb4 -->
+<!-- START_6af89d390ce029a321ba45382132357b -->
+<h2>Change email</h2>
+<p>Change User email by User ID (or <code>me</code> for authenticated User)</p>
+<p><br><small style="padding: 1px 9px 2px;font-weight: bold;white-space: nowrap;color: #ffffff;-webkit-border-radius: 9px;-moz-border-radius: 9px;border-radius: 9px;background-color: #3a87ad;">Requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/users/neque/change_email" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/users/neque/change_email"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "first_name": "Daniel",
+        "last_name": "Runkov",
+        "email_verified_at": null,
+        "title": "456 1",
+        "workplace_name": "sadasd dsadas",
+        "workplace_website_url": "http:\/\/www.yandex.ru",
+        "country_code": "CA",
+        "locality_key": "ChIJDbdkHFQayUwR7-8fITgxTmU",
+        "locale": "en",
+        "date_format": "AMERICAN",
+        "time_format": "12H",
+        "created_at": "2020-03-24 21:18:59",
+        "updated_at": "2020-03-27 21:34:21",
+        "deleted_at": null,
+        "avatar": {
+            "id": null,
+            "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+        },
+        "media": []
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/users/{user_id}/change_email</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user_id</code></td>
+<td>required</td>
+<td>User ID (or <code>me</code> string)</td>
+</tr>
+</tbody>
+</table>
+<!-- END_6af89d390ce029a321ba45382132357b -->
+<!-- START_e5ae33ff50202a51d524b364d13e00b2 -->
+<h2>Get BookingPages</h2>
+<p>Get BookingPages of this User</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/users/83/booking_pages" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/users/83/booking_pages"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "organization_id": null,
+            "slug": "a3om77",
+            "title": null,
+            "use_user_name_as_title": true,
+            "use_user_avatar_as_user_avatar": true,
+            "welcome_message": "Welcome to my scheduling page. Please follow the instructions to add a booking to my calendar.",
+            "created_at": "2020-03-24 21:18:59",
+            "updated_at": "2020-03-24 21:18:59",
+            "deleted_at": null,
+            "computed_title": null,
+            "user_avatar": {
+                "id": null,
+                "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+            },
+            "computed_user_avatar": {
+                "id": null,
+                "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+            },
+            "logo": {
+                "id": null,
+                "url": null
+            },
+            "user": {
+                "id": 1,
+                "first_name": "Daniel",
+                "last_name": "Runkov",
+                "email_verified_at": null,
+                "title": "456 1",
+                "workplace_name": "sadasd dsadas",
+                "workplace_website_url": "http:\/\/www.yandex.ru",
+                "country_code": "CA",
+                "locality_key": "ChIJDbdkHFQayUwR7-8fITgxTmU",
+                "locale": "en",
+                "date_format": "AMERICAN",
+                "time_format": "12H",
+                "created_at": "2020-03-24 21:18:59",
+                "updated_at": "2020-03-27 21:34:21",
+                "deleted_at": null,
+                "avatar": {
+                    "id": null,
+                    "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+                },
+                "media": []
+            },
+            "media": []
+        },
+        {
+            "id": 1,
+            "user_id": 1,
+            "organization_id": null,
+            "slug": "a3om77",
+            "title": null,
+            "use_user_name_as_title": true,
+            "use_user_avatar_as_user_avatar": true,
+            "welcome_message": "Welcome to my scheduling page. Please follow the instructions to add a booking to my calendar.",
+            "created_at": "2020-03-24 21:18:59",
+            "updated_at": "2020-03-24 21:18:59",
+            "deleted_at": null,
+            "computed_title": null,
+            "user_avatar": {
+                "id": null,
+                "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+            },
+            "computed_user_avatar": {
+                "id": null,
+                "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+            },
+            "logo": {
+                "id": null,
+                "url": null
+            },
+            "user": {
+                "id": 1,
+                "first_name": "Daniel",
+                "last_name": "Runkov",
+                "email_verified_at": null,
+                "title": "456 1",
+                "workplace_name": "sadasd dsadas",
+                "workplace_website_url": "http:\/\/www.yandex.ru",
+                "country_code": "CA",
+                "locality_key": "ChIJDbdkHFQayUwR7-8fITgxTmU",
+                "locale": "en",
+                "date_format": "AMERICAN",
+                "time_format": "12H",
+                "created_at": "2020-03-24 21:18:59",
+                "updated_at": "2020-03-27 21:34:21",
+                "deleted_at": null,
+                "avatar": {
+                    "id": null,
+                    "url": "http:\/\/loc.bookify.ai\/img\/avatar.png"
+                },
+                "media": []
+            },
+            "media": []
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/users/{user_id}/booking_pages</code></p>
+<h4>URL Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user_id</code></td>
+<td>required</td>
+<td>User ID (or <code>me</code>)</td>
+</tr>
+</tbody>
+</table>
+<!-- END_e5ae33ff50202a51d524b364d13e00b2 -->
+<h1>general</h1>
+<!-- START_2be1f0e022faf424f18f30275e61416e -->
+<h2>Handle a login request to the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/auth/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/auth/login</code></p>
+<!-- END_2be1f0e022faf424f18f30275e61416e -->
+<!-- START_4b77551ffe3e806c992cdd1044012aa7 -->
+<h2>api/v1/auth/refresh</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/auth/refresh" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/refresh"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "is_authenticated": false
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/auth/refresh</code></p>
+<!-- END_4b77551ffe3e806c992cdd1044012aa7 -->
+<!-- START_4eff96325064b0bf6061147d28f77ca7 -->
+<h2>api/v1/auth/email/check</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/auth/email/check" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/email/check"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/auth/email/check</code></p>
+<!-- END_4eff96325064b0bf6061147d28f77ca7 -->
+<!-- START_623f78fbfc9566609d290c0a47c06c5c -->
+<h2>api/v1/auth/email/forget</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/auth/email/forget" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/email/forget"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/auth/email/forget</code></p>
+<!-- END_623f78fbfc9566609d290c0a47c06c5c -->
+<!-- START_a68ff660ea3d08198e527df659b17963 -->
+<h2>Log the user out of the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/auth/logout" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/logout"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/auth/logout</code></p>
+<!-- END_a68ff660ea3d08198e527df659b17963 -->
+<!-- START_3157fb6d77831463001829403e201c3e -->
+<h2>Handle a registration request for the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/auth/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/auth/register</code></p>
+<!-- END_3157fb6d77831463001829403e201c3e -->
+<!-- START_5c8ff9b2312a504a5405ad3007610050 -->
+<h2>Send a reset link to the given user.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/auth/password/email" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/password/email"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/auth/password/email</code></p>
+<!-- END_5c8ff9b2312a504a5405ad3007610050 -->
+<!-- START_11eddaef605264cbbe21511716d17d51 -->
+<h2>Reset the given user&#039;s password.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/auth/password/reset" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/password/reset"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/auth/password/reset</code></p>
+<!-- END_11eddaef605264cbbe21511716d17d51 -->
+<!-- START_7b05e64da87550906fbf107c8173c53e -->
+<h2>Change User password</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/auth/password/change" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"current_password":"eligendi","password":"quo","password_confirmation":"est"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/auth/password/change"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "current_password": "eligendi",
+    "password": "quo",
+    "password_confirmation": "est"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/auth/password/change</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>current_password</code></td>
+<td>required</td>
+<td>optional</td>
+<td>Current User password</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>required</td>
+<td>optional</td>
+<td>New User password</td>
+</tr>
+<tr>
+<td><code>password_confirmation</code></td>
+<td>New</td>
+<td>optional</td>
+<td>User password confirmation</td>
+</tr>
+</tbody>
+</table>
+<!-- END_7b05e64da87550906fbf107c8173c53e -->
+<!-- START_fe85748c12a3cbca38894583f298c6c8 -->
+<h2>api/v1/localities/detect</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/localities/detect" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/localities/detect"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/localities/detect</code></p>
+<!-- END_fe85748c12a3cbca38894583f298c6c8 -->
+<!-- START_007b03beb5761f286b383e07f4716c74 -->
+<h2>api/v1/localities/autocomplete</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/localities/autocomplete" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/localities/autocomplete"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (422):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "error": "Validation",
+    "validation_fields": {
+        "query": [
+            "The query field must be present."
+        ]
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/localities/autocomplete</code></p>
+<!-- END_007b03beb5761f286b383e07f4716c74 -->
+<!-- START_6ff14855385b94e5d4b379e6cf2af389 -->
+<h2>api/v1/localities/{locality_key}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://loc.bookify.ai/api/v1/localities/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/localities/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (500):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "error": "Internal Error"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/localities/{locality_key}</code></p>
+<!-- END_6ff14855385b94e5d4b379e6cf2af389 -->
+<!-- START_b998f167d7c49fa161367d1ece1f16b6 -->
+<h2>api/v1/intro/basic</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/intro/basic" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/intro/basic"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/intro/basic</code></p>
+<!-- END_b998f167d7c49fa161367d1ece1f16b6 -->
+<!-- START_1ed699f6e070edab91e17b3f08059e38 -->
+<h2>api/v1/intro/calendar</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/intro/calendar" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/intro/calendar"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/intro/calendar</code></p>
+<!-- END_1ed699f6e070edab91e17b3f08059e38 -->
+<!-- START_644f55443f3e8d7ac09eeafb7370205a -->
+<h2>api/v1/intro/calendar/settings</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/intro/calendar/settings" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/intro/calendar/settings"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/intro/calendar/settings</code></p>
+<!-- END_644f55443f3e8d7ac09eeafb7370205a -->
+<!-- START_f008b759352d2533c26b787a0c5d0e42 -->
+<h2>api/v1/intro/availability</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/intro/availability" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/intro/availability"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/intro/availability</code></p>
+<!-- END_f008b759352d2533c26b787a0c5d0e42 -->
+<!-- START_22c5310e7f9c8bc4893ca7344e247508 -->
+<h2>api/v1/intro/role</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://loc.bookify.ai/api/v1/intro/role" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://loc.bookify.ai/api/v1/intro/role"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/intro/role</code></p>
+<!-- END_22c5310e7f9c8bc4893ca7344e247508 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>

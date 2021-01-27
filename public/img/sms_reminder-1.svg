@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="69px" viewBox="0 0 41 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>text_reminder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="SMS-notifications" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="publisher-text-on/off---1" transform="translate(-299.000000, -528.000000)">
+            <g id="text_reminder" transform="translate(300.000000, 529.000000)">
+                <rect id="Rectangle-7-Copy" stroke="#666A73" stroke-width="1.5" fill="#FFFFFF" x="0" y="0" width="39" height="67" rx="3"></rect>
+                <path d="M0.5,5 L38.5032893,5" id="Line-2-Copy" stroke="#666A73" stroke-linecap="square"></path>
+                <g id="Group-5" transform="translate(10.000000, 22.000000)">
+                    <circle id="Oval-117" fill-opacity="0.5" fill="#00A2FF" cx="10.1380774" cy="10.4521839" r="10.0434783"></circle>
+                    <path d="M11.6929342,6.38947892 C13.0721859,6.93021807 14.0488281,8.27309688 14.0488281,9.8440827 C14.0488281,10.467183 14.0488281,11.3293071 14.0488281,12.3088571 C14.5744543,12.9745642 14.8834069,13.7879306 14.8834069,14.6660936 C13.4323272,14.6660936 12.3603978,14.6660936 11.4523607,14.6660936 C11.4523607,15.2806604 10.9541559,15.7788653 10.339589,15.7788653 C9.72502213,15.7788653 9.22681726,15.2806604 9.22681726,14.6660936 C8.26096999,14.6660936 7.24940857,14.6660936 5.79577106,14.6660936 C5.79577106,13.7879306 6.10472368,12.9745642 6.63034986,12.3088571 C6.63034986,11.4461132 6.63034986,11.3722319 6.63034986,9.8440827 C6.63034986,8.27309688 7.60699206,6.93021807 8.98624378,6.38947892 C9.218674,5.87377693 9.73720922,5.51479571 10.339589,5.51479571 C10.9419688,5.51479571 11.460504,5.87377693 11.6929342,6.38947892 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                </g>
+                <path d="M0.5,62 L39.5,62" id="Line-2-Copy-2" stroke="#666A73" stroke-linecap="square"></path>
+                <g id="Group-6" transform="translate(14.000000, 2.000000)" fill="#666A73">
+                    <rect id="Rectangle-2" x="2" y="0" width="8" height="1" rx="0.5"></rect>
+                    <circle id="Oval" cx="0.5" cy="0.5" r="1"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

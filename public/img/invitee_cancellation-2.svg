@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="50px" viewBox="0 0 62 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Cancellation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Joint-Calendar---Updated" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Invitee-Notifications---Email-Confirmations" transform="translate(-289.000000, -438.000000)">
+            <g id="Cancellation" transform="translate(290.000000, 439.000000)">
+                <path d="M0,20.7483007 C0,19.0915509 1.21319175,17.152065 2.68870147,16.4266803 L30,3 L57.3075059,16.4266803 C58.7922285,17.1566955 59.995834,19.0957149 59.995834,20.7483007 L59.995834,44.746596 C59.995834,46.4033458 58.6586171,47.7464069 57.0001046,47.7464069 L2.99572942,47.7464069 C1.34123375,47.7464069 0,46.3991818 0,44.746596 L0,20.7483007 Z" id="Rectangle-2-Copy-4" stroke="#666A73" stroke-width="1.5" stroke-linejoin="round"></path>
+                <g id="Group-9-Copy-2" transform="translate(7.499479, 0.000000)">
+                    <g id="Group-8" stroke="#666A73" stroke-width="1.5" fill="#FFFFFF">
+                        <rect id="Rectangle-7" x="0" y="0.499895851" width="44.9968755" height="41.2471359" rx="4"></rect>
+                    </g>
+                    <g id="Group-7" transform="translate(12.000521, 5.500000)">
+                        <g id="Group-7-Copy-3" transform="translate(0.398663, 0.500398)" fill="#E41600" opacity="0.502943841">
+                            <circle id="Oval-117" cx="10" cy="10" r="10"></circle>
+                        </g>
+                        <g id="Group-10" transform="translate(7.000000, 7.627833)" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2.72670775e-13,6.94444444 L6.72,0" id="Path-3-Copy-6"></path>
+                            <path d="M7.10542736e-15,6.94444444 L6.72,0" id="Path-3-Copy-7" transform="translate(3.360000, 3.472222) scale(-1, 1) translate(-3.360000, -3.472222) "></path>
+                        </g>
+                    </g>
+                </g>
+                <polygon id="Path-5-Copy-2" stroke="#666A73" stroke-width="0.75" fill="#FFFFFF" points="0.374973963 19.9983336 19.1799503 28.8635554 25.1232555 31.9975004 34.8725785 31.9975004 59.995834 19.9983336 59.995834 46.246511 58.8709121 47.7464069 1.49989585 47.7464069 0 46.246511"></polygon>
+                <path d="M0.749947925,46.9964597 L27.7094772,29.7147102 C27.7094772,29.7147102 28.7993388,28.9985843 29.997917,28.9977095 C31.1964952,28.9968347 32.31039,29.7113521 32.31039,29.7113521 L59.6208601,46.9964597" id="Path-4-Copy-2" stroke="#666A73" stroke-width="0.75" stroke-linejoin="round" fill="#FFFFFF"></path>
+                <path d="M59.995834,19.9983336 L59.995834,45.486812 C59.995834,46.7320591 58.9921452,47.7415313 57.7534242,47.7415313 L2.24240986,47.7415313 C1.00396109,47.7415313 0,46.7348691 0,45.486812 L0,19.9983336" id="Rectangle-2-Copy-5" stroke="#666A73" stroke-width="1.5" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

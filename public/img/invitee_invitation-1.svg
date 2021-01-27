@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="54px" viewBox="0 0 62 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Calendar Invitation</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="12.7491147" y="12.7491147" width="34.4976046" height="29.2479691"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="34.4976046" height="29.2479691" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Joint-Calendar---Updated" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Invitee-Notifications---Reminder---On" transform="translate(-289.000000, -324.000000)">
+            <g id="Calendar-Invitation" transform="translate(290.000000, 325.000000)">
+                <path d="M0,24.7483007 C0,23.0915509 1.12120493,21.0197066 2.51886692,20.1112263 L29.997917,2.24984378 L57.4769671,20.1112263 C58.8680989,21.015462 59.995834,23.0957149 59.995834,24.7483007 L59.995834,48.746596 C59.995834,50.4033458 58.6586171,51.7464069 57.0001046,51.7464069 L2.99572942,51.7464069 C1.34123375,51.7464069 0,50.3991818 0,48.746596 L0,24.7483007 Z" id="Rectangle-2-Copy-4" stroke="#666A73" stroke-width="1.5" stroke-linejoin="round"></path>
+                <g id="Group-9-Copy-2" transform="translate(7.499479, 0.000000)">
+                    <g id="Group-8">
+                        <rect id="Rectangle-7" stroke="#666A73" stroke-width="1.5" fill="#FFFFFF" x="0" y="1.49989585" width="44.9968755" height="41.2471359" rx="4"></rect>
+                        <g id="Group-4" transform="translate(37.247344, 0.000000)">
+                            <path d="M1.12492189,4.12471359 L1.12492189,0" id="Path-3-Copy" stroke="#666A73" stroke-width="0.75" stroke-linecap="round"></path>
+                            <ellipse id="Oval-Copy" fill="#666A73" cx="1.12492189" cy="4.87466152" rx="1.12492189" ry="1.12492189"></ellipse>
+                        </g>
+                        <g id="Group-6" transform="translate(5.499688, 0.000000)">
+                            <path d="M1.12492189,4.12471359 L1.12492189,0" id="Path-3-Copy-2" stroke="#666A73" stroke-width="0.75" stroke-linecap="round"></path>
+                            <ellipse id="Oval-Copy-2" fill="#666A73" cx="1.12492189" cy="4.87466152" rx="1.12492189" ry="1.12492189"></ellipse>
+                        </g>
+                        <g id="Group-5" transform="translate(26.664792, 0.000000)">
+                            <path d="M1.49989585,4.12471359 L1.49989585,0" id="Path-3-Copy-3" stroke="#666A73" stroke-width="0.75" stroke-linecap="round"></path>
+                            <ellipse id="Oval-Copy-3" fill="#666A73" cx="1.49989585" cy="4.87466152" rx="1.12492189" ry="1.12492189"></ellipse>
+                        </g>
+                        <g id="Group-5-Copy" transform="translate(16.082240, 0.000000)">
+                            <path d="M1.49989585,4.12471359 L1.49989585,0" id="Path-3-Copy-3" stroke="#666A73" stroke-width="0.75" stroke-linecap="round"></path>
+                            <ellipse id="Oval-Copy-3" fill="#666A73" cx="1.49989585" cy="4.87466152" rx="1.12492189" ry="1.12492189"></ellipse>
+                        </g>
+                        <path d="M0.374973963,7.68696624 L44.6234639,7.68696624" id="Path-2" stroke="#666A73" stroke-width="0.75"></path>
+                    </g>
+                </g>
+                <rect id="Rectangle-2" fill="#F6F6F6" x="12.7491147" y="17.9987502" width="24.7482815" height="5.24963548"></rect>
+                <rect id="Rectangle-2-Copy" fill="#F6F6F6" x="12.7491147" y="12.7491147" width="34.4976046" height="5.24963548"></rect>
+                <use id="Rectangle-8" stroke="#E8E8E8" mask="url(#mask-2)" stroke-width="1.5" xlink:href="#path-1"></use>
+                <path d="M12.7491147,18.2799807 L47.2478656,18.2799807" id="Path-4" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M12.7491147,23.5296162 L47.2478656,23.5296162" id="Path-4-Copy-3" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M27.4936266,12.7491147 L27.4936266,36.7503777" id="Path-5" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M22.6725328,12.7491147 L22.6725328,36.7503777" id="Path-5-Copy-8" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M17.851439,12.7491147 L17.851439,36.7503777" id="Path-5-Copy-9" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M32.3147204,12.7491147 L32.3147204,36.7503777" id="Path-5-Copy-3" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M37.1358142,12.7491147 L37.1358142,36.7503777" id="Path-5-Copy-6" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M41.956908,12.7491147 L41.956908,36.7503777" id="Path-5-Copy-7" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M12.7491147,28.7792516 L47.2478656,28.7792516" id="Path-4-Copy-6" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <path d="M12.7491147,33.2789392 L47.2478656,33.2789392" id="Path-4-Copy-7" stroke="#E8E8E8" stroke-width="0.75"></path>
+                <polygon id="Path-5-Copy-2" stroke="#666A73" stroke-width="0.75" fill="#FFFFFF" points="0.374973963 23.9983336 19.1799503 32.8635554 25.1232555 35.9975004 34.8725785 35.9975004 59.995834 23.9983336 59.995834 50.246511 58.8709121 51.7464069 1.49989585 51.7464069 0 50.246511"></polygon>
+                <path d="M0.749947925,50.9964597 L27.7094772,33.7147102 C27.7094772,33.7147102 28.7993388,32.9985843 29.997917,32.9977095 C31.1964952,32.9968347 32.31039,33.7113521 32.31039,33.7113521 L59.6208601,50.9964597" id="Path-4-Copy-2" stroke="#666A73" stroke-width="0.75" stroke-linejoin="round" fill="#FFFFFF"></path>
+                <path d="M59.995834,23.9983336 L59.995834,49.486812 C59.995834,50.7320591 58.9921452,51.7415313 57.7534242,51.7415313 L2.24240986,51.7415313 C1.00396109,51.7415313 0,50.7348691 0,49.486812 L0,23.9983336" id="Rectangle-2-Copy-5" stroke="#666A73" stroke-width="1.5" stroke-linejoin="round"></path>
+                <rect id="Rectangle-2-Copy-6" fill="#00A2FF" x="36.8545838" y="17.9987502" width="5.38355475" height="5.79868488"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

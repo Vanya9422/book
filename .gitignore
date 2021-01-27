@@ -1,0 +1,38 @@
+# PhpStorm
+
+.idea/*
+!.idea/codeStyles
+
+# Laravel
+
+.DS_Store
+node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage/app/*
+!/storage/app/geo/
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/public/css
+/public/js
+/public/vue-ssr-client-manifest.json
+/public/vue-ssr-server-bundle.json
+
+# Nginx configs & logs
+
+/nginx.conf
+/nginx.error.log
+/nginx.access.log
+
+# Executable files
+
+*.exe
+*.nupkg
+*.dmg

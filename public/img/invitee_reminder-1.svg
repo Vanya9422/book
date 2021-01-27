@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="50px" viewBox="0 0 62 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Reminder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Joint-Calendar---Updated" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Invitee-Notifications---Reminder---On" transform="translate(-289.000000, -468.000000)">
+            <g id="Reminder" transform="translate(290.000000, 469.000000)">
+                <path d="M0,20.7483007 C0,19.0915509 1.21319175,17.152065 2.68870147,16.4266803 L30,3 L57.3075059,16.4266803 C58.7922285,17.1566955 59.995834,19.0957149 59.995834,20.7483007 L59.995834,44.746596 C59.995834,46.4033458 58.6586171,47.7464069 57.0001046,47.7464069 L2.99572942,47.7464069 C1.34123375,47.7464069 0,46.3991818 0,44.746596 L0,20.7483007 Z" id="Rectangle-2-Copy-4" stroke="#666A73" stroke-width="1.5" stroke-linejoin="round"></path>
+                <g id="Group-9-Copy-2" transform="translate(7.499479, 0.000000)">
+                    <g id="Group-8" stroke="#666A73" stroke-width="1.5" fill="#FFFFFF">
+                        <rect id="Rectangle-7" x="0" y="0.499895851" width="44.9968755" height="41.2471359" rx="4"></rect>
+                    </g>
+                    <g id="Group-7-Copy-3" transform="translate(12.262820, 5.500398)">
+                        <ellipse id="Oval-117" fill="#00A2FF" opacity="0.502943841" cx="10.2494849" cy="10.5996574" rx="10.1538462" ry="10.1851852"></ellipse>
+                        <g id="Group-12" transform="translate(5.172562, 5.044102)" fill="#FFFFFF">
+                            <path d="M1.53064904,7.43842518 C1.53064904,6.56350851 1.53064904,6.48858476 1.53064904,4.93887442 C1.53064904,2.86141442 3.20958123,1.17730035 5.28064904,1.17730035 C7.35171685,1.17730035 9.03064904,2.86141442 9.03064904,4.93887442 C9.03064904,5.57076622 9.03064904,6.44505438 9.03064904,7.43842518 C9.56205133,8.11352497 9.87439904,8.93836747 9.87439904,9.82892072 C5.28064904,9.82892072 4.44542177,9.82892072 0.686899038,9.82892072 C0.686899038,8.93836747 0.999246743,8.11352497 1.53064904,7.43842518 Z" id="Combined-Shape"></path>
+                            <ellipse id="Oval-4" cx="5.28064904" cy="9.82892072" rx="1.125" ry="1.12847222"></ellipse>
+                            <ellipse id="Oval-4-Copy" cx="5.28064904" cy="2.05313365" rx="1.5" ry="1.50462963"></ellipse>
+                        </g>
+                    </g>
+                </g>
+                <polygon id="Path-5-Copy-2" stroke="#666A73" stroke-width="0.75" fill="#FFFFFF" points="0.374973963 19.9983336 19.1799503 28.8635554 25.1232555 31.9975004 34.8725785 31.9975004 59.995834 19.9983336 59.995834 46.246511 58.8709121 47.7464069 1.49989585 47.7464069 0 46.246511"></polygon>
+                <path d="M0.749947925,46.9964597 L27.7094772,29.7147102 C27.7094772,29.7147102 28.7993388,28.9985843 29.997917,28.9977095 C31.1964952,28.9968347 32.31039,29.7113521 32.31039,29.7113521 L59.6208601,46.9964597" id="Path-4-Copy-2" stroke="#666A73" stroke-width="0.75" stroke-linejoin="round" fill="#FFFFFF"></path>
+                <path d="M59.995834,19.9983336 L59.995834,45.486812 C59.995834,46.7320591 58.9921452,47.7415313 57.7534242,47.7415313 L2.24240986,47.7415313 C1.00396109,47.7415313 0,46.7348691 0,45.486812 L0,19.9983336" id="Rectangle-2-Copy-5" stroke="#666A73" stroke-width="1.5" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
